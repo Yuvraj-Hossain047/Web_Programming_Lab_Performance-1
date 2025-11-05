@@ -121,9 +121,10 @@ select{
 }
 #country_code_option{
     width: 35%;
-    border-radius: 8px 0 0 25px;
+    /* border-radius: 8px 0 0 25px; */
+    padding: 10px 0 10px 10px;
 }
 #phone_number{
-    width: 60%;
-    border-radius: 0 25px 8px 0;
+    width: 63%;
+    /* border-radius: 0 25px 8px 0; */
 }
