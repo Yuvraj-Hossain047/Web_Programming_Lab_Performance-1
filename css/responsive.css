@@ -1,0 +1,28 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px){
+    .container{
+        width: auto;
+        padding: 0 15px;
+    }
+    #loginForm {
+        height: 100vh;
+    }
+    #loginForm .form .user_data .name, #loginForm .form .user_data .dateBirth,
+    #loginForm .form .user_data .contact,
+    #loginForm .form .user_data .password,
+    #loginForm .form .user_data .gen_loc {
+	    flex-direction: column;
+    }
+}
+
+/*Medium devices (tablets, 768px and up) */ */
+@media (min-width: 768px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { ... }
