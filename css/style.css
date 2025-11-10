@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html, body {
     font-family: "Roboto", sans-serif;
+}
+input, select{
+    font-family: inherit;
 }
 a{
     text-decoration: none;
@@ -30,14 +35,37 @@ a{
     background: #000 !important;
     color: #b6b6b6 !important;
 }
-#loginForm {
+select{
+    -webkit-appearance: none; /* Removes default WebKit styling */
+    -moz-appearance: none;    /* For Firefox */
+    appearance: none;         /* Standard syntax */
+    background: none;
+}
+.dropDownParent{
+    position: relative;
+    width: 100%;
+}
+.dropdown::before{
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(30%);
+    pointer-events: none;
+    font-size: 12px;
+}
+/* ========================================
+===================CSS Start===============
+=========================================== */
+#loginForm{
     height: 100vh;
-    padding: 30px 0;
+    padding: 40px 0;
     background: url('../images/cover.jpg') no-repeat center;
     background-size: cover;
 }
 #loginForm .mainHeading{
     text-align: center;
+    margin: 20px 0;
 }
 #loginForm .form{
     display: flex;
@@ -83,25 +111,27 @@ select,
 input::placeholder,
 select{
     font-size: 1rem;
-    color: #000;
+    color: #2b2b2b;
 }
 #loginForm .form .user_data .name,
+#loginForm .form .user_data .dateBirth,
 #loginForm .form .user_data .contact,
-#loginForm .form .user_data .password{
+#loginForm .form .user_data .password,
+#loginForm .form .user_data .gen_loc{
     width: 100%;
     display: flex;
-    flex: 1;
     gap: 20px;
     justify-content: space-between;
 }
 #loginForm .form .user_data .name > div,
 #loginForm .form .user_data .contact > div,
-#loginForm .form .user_data .password > div{
+#loginForm .form .user_data .password > div,
+#loginForm .form .user_data .gen_loc > div{
     flex: 1;
 }
 #loginForm .form .user_data .location,
 #loginForm .form .user_data .gender,
-#loginForm .form .user_data .dateBirth{
+#loginForm .form .user_data .dateBirth > div{
     width: 100%;
 }
 #loginForm .form .user_data .dateBirth .dateBirthData{
@@ -121,10 +151,21 @@ select{
 }
 #country_code_option{
     width: 35%;
-    /* border-radius: 8px 0 0 25px; */
-    padding: 10px 0 10px 10px;
+    border-radius: 8px 0 0 25px;
 }
 #phone_number{
     width: 63%;
-    /* border-radius: 0 25px 8px 0; */
+    border-radius: 0 25px 8px 0;
+}
+#loginForm .form .contact .phone .phone-input{
+    position: relative;
+}
+#loginForm .form .contact .phone .phone-input .drop_down::before{
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
 }
